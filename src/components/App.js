@@ -10,7 +10,7 @@ const Movies = lazy(() => import('../pages/Movies'));
 
 export const App = () => {
   return (
-    <Layout>
+    <div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -22,6 +22,6 @@ export const App = () => {
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </Layout>
+    </div>
   );
 };

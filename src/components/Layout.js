@@ -1,9 +1,14 @@
-import styled from 'styled-components';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { AppBar } from './AppBar/AppBar';
 
-export const Layout = styled.section`
-  margin: 24px;
-  padding: 8px;
-  /* border: 1px solid lightgray;
-  border-radius: 4px;
-  width: max-content; */
-`;
+export const Layout = () => {
+  return (
+    <>
+      <AppBar />
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
+    </>
+  );
+};
