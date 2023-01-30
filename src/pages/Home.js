@@ -9,7 +9,12 @@ const Home = () => {
     getTrendingMovies('day').then(setMovies);
   }, []);
 
-  return <div>{movies.length > 0 && <MoviesList movies={movies} />}</div>;
+  return (
+    <div>
+      <h1>Trending today</h1>
+      {movies.length > 0 && <MoviesList movies={movies} />}
+    </div>
+  );
 };
 
 export default Home;
